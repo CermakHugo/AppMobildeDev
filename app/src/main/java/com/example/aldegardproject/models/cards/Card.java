@@ -15,9 +15,8 @@ public abstract class Card {
     public Card(String title, String description, int[] bonus, int optimalValue, boolean isConstantCard){
         this.title = title;
         this.description = description;
-        for (int i = 0; i < bonusCharacteristics.length - 1; i++) {
-            bonusCharacteristics[i] = bonus[i];
-        }
+        if (bonusCharacteristics.length - 1 >= 0)
+            System.arraycopy(bonus, 0, bonusCharacteristics, 0, bonusCharacteristics.length - 1);
         this.optimalValue = optimalValue;
         this.isConstantCard = isConstantCard;
     }
