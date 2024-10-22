@@ -9,11 +9,12 @@ import com.example.aldegardproject.models.cards.MilitaryCard;
 import com.example.aldegardproject.models.cards.SatisfactionCard;
 import com.example.aldegardproject.models.characteristics.Characteristic;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
 
-public class Game {
+public class Game implements Serializable {
 
 
     private King currentKing;
