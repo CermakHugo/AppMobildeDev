@@ -22,46 +22,44 @@
 
     <TextView
         android:id="@+id/NameText"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:layout_marginStart="50dp"
+        android:layout_marginEnd="50dp"
         android:fontFamily="@font/alex_brush"
         android:text="Prenom/numéro/dynastie"
         android:textSize="24sp"
         app:layout_constraintBottom_toBottomOf="@+id/imageView4"
         app:layout_constraintEnd_toEndOf="@+id/imageView4"
-        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="@+id/imageView4"
         app:layout_constraintTop_toTopOf="@+id/imageView4"
         app:layout_constraintVertical_bias="0.343" />
+
+    <!-- Barres de vie entre les deux images -->
 
     <TextView
         android:id="@+id/DayText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
         android:fontFamily="cursive"
         android:text="Jour : "
         android:textAlignment="center"
         android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="@+id/NameText"
-        app:layout_constraintHorizontal_bias="0.307"
         app:layout_constraintStart_toStartOf="@+id/NameText"
         app:layout_constraintTop_toBottomOf="@+id/NameText" />
-
-    <!-- Barres de vie entre les deux images -->
 
     <TextView
         android:id="@+id/dayInt"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
         android:fontFamily="cursive"
         android:text="0"
         android:textAlignment="center"
         android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="@+id/NameText"
-        app:layout_constraintHorizontal_bias="0.614"
-        app:layout_constraintStart_toStartOf="@+id/NameText"
+        app:layout_constraintHorizontal_bias="0.053"
+        app:layout_constraintStart_toEndOf="@+id/DayText"
         app:layout_constraintTop_toBottomOf="@+id/NameText" />
 
     <LinearLayout
@@ -171,7 +169,6 @@
         android:layout_marginTop="8dp"
         app:layout_constraintDimensionRatio="1:1"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/linearLayout"
         app:layout_constraintWidth_percent="0.9"
@@ -189,11 +186,10 @@
         android:textSize="20sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="@+id/imageView9"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintEnd_toEndOf="@+id/imageView9"
         app:layout_constraintStart_toStartOf="@+id/imageView9"
         app:layout_constraintTop_toTopOf="@+id/imageView9"
-        app:layout_constraintVertical_bias="0.274"
+        app:layout_constraintVertical_bias="0.25"
         tools:text="Texte de la requette" />
 
     <LinearLayout
