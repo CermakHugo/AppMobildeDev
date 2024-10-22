@@ -1,10 +1,8 @@
 package com.example.aldegardproject.controllers;
 
-import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
 import android.widget.Button;
-import android.widget.RadioButton;
 import android.widget.RadioGroup;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -23,7 +21,7 @@ public class CreateGameController extends AppCompatActivity {
 
     public void onCreate(Bundle savedInstanceState){
         super.onCreate(savedInstanceState);
-        intent = new Intent(this, GameActivity.class);
+        intent = new Intent(this, GameController.class);
         getDelegate();
         enterYourName();
     }

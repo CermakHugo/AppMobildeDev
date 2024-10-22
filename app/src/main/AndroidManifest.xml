@@ -22,7 +22,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".controllers.GameActivity"
+            android:name=".controllers.GameController"
             android:exported="true"
             android:screenOrientation="portrait">
         </activity>

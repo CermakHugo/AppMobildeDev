@@ -24,7 +24,7 @@ public abstract class Card implements Serializable {
     protected boolean isConstantCard;
     protected int optimalValue;
     protected int weight;
-
+    // {FaithBonus , MilitaryBonus, EconomyBonus, SatisfactionBonus, DevelopmentBonus, LuckBonus }
     final int[] bonusCharacteristics = new int[6];
 
     public Card(String title, String description, int[] bonus, int optimalValue, boolean isConstantCard){

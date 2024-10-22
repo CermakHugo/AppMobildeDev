@@ -5,6 +5,7 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/background"
     tools:context=".MainActivity">
 
     <ImageView
@@ -28,6 +29,7 @@
         android:layout_marginEnd="50dp"
         android:fontFamily="@font/alex_brush"
         android:text="Prenom/numéro/dynastie"
+        android:textAlignment="center"
         android:textSize="24sp"
         app:layout_constraintBottom_toBottomOf="@+id/imageView4"
         app:layout_constraintEnd_toEndOf="@+id/imageView4"
@@ -82,6 +84,8 @@
                 android:layout_width="90dp"
                 android:layout_height="wrap_content"
                 android:text="@string/satisfaction"
+                android:textAlignment="center"
+                android:textColor="@color/black"
                 android:textSize="16sp" />
 
             <ProgressBar
@@ -104,6 +108,8 @@
                 android:layout_width="90dp"
                 android:layout_height="wrap_content"
                 android:text="@string/economy"
+                android:textAlignment="center"
+                android:textColor="@color/black"
                 android:textSize="16sp" />
 
             <ProgressBar
@@ -126,6 +132,8 @@
                 android:layout_width="90dp"
                 android:layout_height="wrap_content"
                 android:text="@string/military"
+                android:textAlignment="center"
+                android:textColor="@color/black"
                 android:textSize="16sp" />
 
             <ProgressBar
@@ -148,6 +156,8 @@
                 android:layout_width="90dp"
                 android:layout_height="wrap_content"
                 android:text="@string/faith"
+                android:textAlignment="center"
+                android:textColor="@color/black"
                 android:textSize="16sp" />
 
             <ProgressBar

@@ -16,4 +16,8 @@
     <string name="satisfaction">Popularité :</string>
     <string name="accept_button">Accepter</string>
     <string name="refuse_button">Refuser</string>
+    <string name="defeat">Défaite</string>
+    <string name="score">Score :</string>
+    <string name="maxDay">Tu as survécu :</string>
+    <string name="day">jours</string>
 </resources>

@@ -1,5 +1,7 @@
 package com.example.aldegardproject.controllers;
 
+import android.app.AlertDialog;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.widget.Button;
@@ -8,20 +10,17 @@ import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.example.aldegardproject.MainActivity;
 import com.example.aldegardproject.R;
 import com.example.aldegardproject.models.Game;
-import com.example.aldegardproject.models.GameDifficulty;
 import com.example.aldegardproject.models.cards.Card;
 
 import java.util.Objects;
 
 
-public class GameActivity extends AppCompatActivity {
+public class GameController extends AppCompatActivity {
     private Game game;
     private Intent intent;
-
-    public GameActivity(){
-    }
 
     @Override
     public void onCreate(Bundle savedInstanceState){
@@ -59,7 +58,7 @@ public class GameActivity extends AppCompatActivity {
                 game.acceptCurrentCard();
                 updateUI();
             } else {
-                setContentView(R.layout.layout_home);
+                endGame();
             }
 
         });
@@ -69,7 +68,7 @@ public class GameActivity extends AppCompatActivity {
                 game.refuseCurrentCard();
                 updateUI();
             } else {
-                setContentView(R.layout.layout_home);
+                endGame();
             }
 
         });
@@ -102,11 +101,28 @@ public class GameActivity extends AppCompatActivity {
     public void updateDayText(){
         TextView dayText = findViewById(R.id.dayInt);
         int newDay = game.getCurrentDays();
-        dayText.setText(Integer.toString(newDay));
+        dayText.setText("" + newDay);
     }
 
-    public Game getGame() {
-        return game;
+    public void endGame(){
+        Intent intent = new Intent(this, MainActivity.class);
+        int bonus = ( 1 + game.getGameDifficulty().getScoreBonus()) ;
+        int score = game.getCurrentDays() * bonus;
+        AlertDialog.Builder builder = new AlertDialog.Builder(this);
+        builder.setMessage( getString(R.string.defeat) + "\n"
+                        + getString(R.string.maxDay) +" "+ game.getCurrentDays() + " " + getString(R.string.day)+  "\n"
+                        + getString(R.string.score) + " " + score )
+                .setPositiveButton("OK", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        startActivity(intent);
+                        dialog.dismiss();
+                    }
+                });
+        AlertDialog dialog = builder.create();
+        dialog.show();
+
+
     }
 
 }
