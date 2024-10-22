@@ -3,7 +3,9 @@ package com.example.aldegardproject.models.cards;
 import com.example.aldegardproject.models.King;
 import com.example.aldegardproject.models.characteristics.Characteristic;
 
-public abstract class Card {
+import java.io.Serializable;
+
+public abstract class Card implements Serializable {
     public String getTitle() {
         return title;
     }

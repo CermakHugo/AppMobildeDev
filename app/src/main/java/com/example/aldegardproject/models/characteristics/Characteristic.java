@@ -1,6 +1,8 @@
 package com.example.aldegardproject.models.characteristics;
 
-public abstract class Characteristic {
+import java.io.Serializable;
+
+public abstract class Characteristic implements Serializable {
     protected final String name;
     protected int value;
 

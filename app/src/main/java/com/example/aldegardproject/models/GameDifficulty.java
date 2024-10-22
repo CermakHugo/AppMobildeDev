@@ -1,6 +1,8 @@
 package com.example.aldegardproject.models;
 
-public enum GameDifficulty {
+import java.io.Serializable;
+
+public enum GameDifficulty implements Serializable {
 
     EASY(1, "Easy"),
     MEDIUM(2, "Normal"),

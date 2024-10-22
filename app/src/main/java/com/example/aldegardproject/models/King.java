@@ -4,10 +4,12 @@ import com.example.aldegardproject.models.characteristics.Characteristic;
 import com.example.aldegardproject.models.characteristics.PublicCharacteristic;
 import com.example.aldegardproject.models.characteristics.SecretCharacteristic;
 
-public class King {
+import java.io.Serializable;
 
-    private final String username;
-    private final String name;
+public class King implements Serializable {
+
+    private String username;
+    private String name;
     private final PublicCharacteristic faith = new PublicCharacteristic("Faith");
     private final PublicCharacteristic military = new PublicCharacteristic("Military");
     private final PublicCharacteristic economy = new PublicCharacteristic("Economy");
@@ -17,9 +19,7 @@ public class King {
     private final Characteristic[] characteristics = {faith, military, economy, satisfaction, development, luck};
     private int maxDays = 0;
 
-    public King(String username, String name){
-        this.username = username;
-        this.name = name;
+    public King(){
     }
 
     public PublicCharacteristic getFaith() {
@@ -50,8 +50,16 @@ public class King {
         return name;
     }
 
+    public void setName(String name) {
+        this.name = name;
+    }
+
     public String getUsername() {
         return username;
+    }
+
+    public void setUsername(String username) {
+        this.username = username;
     }
 
     public Characteristic[] getCharacteristics() {

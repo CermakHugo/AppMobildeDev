@@ -1,5 +1,6 @@
 package com.example.aldegardproject.controllers;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.widget.Button;
 import android.widget.ProgressBar;
@@ -12,19 +13,26 @@ import com.example.aldegardproject.models.Game;
 import com.example.aldegardproject.models.GameDifficulty;
 import com.example.aldegardproject.models.cards.Card;
 
+import java.util.Objects;
+
 
 public class GameActivity extends AppCompatActivity {
     private Game game;
+    private Intent intent;
 
     public GameActivity(){
-        this.game = new Game(GameDifficulty.HARD);
     }
 
     @Override
     public void onCreate(Bundle savedInstanceState){
         super.onCreate(savedInstanceState);
         getDelegate();
+
+        getIntent().getExtras();
         setContentView(R.layout.layout_game);
+
+        intent = getIntent();
+        game = Objects.requireNonNull(intent.getExtras()).getSerializable("game", Game.class);
 
         initGame();
         updateProgressBar();
@@ -34,6 +42,8 @@ public class GameActivity extends AppCompatActivity {
 
 
     public void initGame(){
+        TextView titleName = findViewById(R.id.NameText);
+        titleName.setText(game.getCurrentKing().getName());
         game.startGame();
         Card currentCard = game.getCurrentCard();
         TextView requestText =  findViewById(R.id.RequestText);

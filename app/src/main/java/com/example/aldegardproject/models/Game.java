@@ -18,8 +18,7 @@ public class Game implements Serializable {
 
 
     private King currentKing;
-
-    private final GameDifficulty gameDifficulty;
+    private GameDifficulty gameDifficulty;
     private final List<FaithCard> allFaithCard = new ArrayList<>();
     private final List<MilitaryCard> allMilitaryCard = new ArrayList<>();
     private final List<EconomyCard> allEconomyCard = new ArrayList<>();
@@ -31,12 +30,12 @@ public class Game implements Serializable {
     private Card currentCard;
     private final Random random = new Random(27062002);
 
-    public Game(GameDifficulty difficulty) {
+    public Game() {
         initFaithCards();
         initMilitaryCards();
         initEconomyCards();
         initSatisfactionCards();
-        gameDifficulty = difficulty;
+        currentKing = new King();
     }
 
     public void initFaithCards() {
@@ -60,7 +59,7 @@ public class Game implements Serializable {
     }
 
     public void startGame(){
-        currentKing = new King("FanDeCroco", "Lord Aldegard III");
+        currentKing = new King();
         startNewDay();
     }
 
@@ -262,5 +261,13 @@ public class Game implements Serializable {
 
     public int getCurrentDays() {
         return currentDays;
+    }
+
+    public GameDifficulty getGameDifficulty() {
+        return gameDifficulty;
+    }
+
+    public void setGameDifficulty(GameDifficulty gameDifficulty) {
+        this.gameDifficulty = gameDifficulty;
     }
 }

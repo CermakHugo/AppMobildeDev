@@ -4,6 +4,8 @@
     <string name="continue_button">Continuer</string>
     <string name="start_button">Nouvelle Patie</string>
     <string name="difficulty_choice">Difficulter :</string>
+    <string name="username_choice_title">Nom d\'Utilisateur :</string>
+    <string name="username_choice">Username ...</string>
     <string name="Option">Option :</string>
     <string name="easy_button">Facile</string>
     <string name="medium_button">Normal</string>
