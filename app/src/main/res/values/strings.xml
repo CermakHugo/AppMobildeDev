@@ -1,3 +1,17 @@
 <resources>
     <string name="app_name">AldegardProject</string>
+    <string name="app_title">Aldegard</string>
+    <string name="continue_button">Continuer</string>
+    <string name="start_button">Nouvelle Patie</string>
+    <string name="difficulty_choice">Difficulter :</string>
+    <string name="Option">Option :</string>
+    <string name="easy_button">Facile</string>
+    <string name="medium_button">Normal</string>
+    <string name="hard_button">Difficile</string>
+    <string name="faith">Foi :</string>
+    <string name="military">Armée :</string>
+    <string name="economy">Richesse :</string>
+    <string name="satisfaction">Popularité :</string>
+    <string name="accept_button">Accepter</string>
+    <string name="refuse_button">Refuser</string>
 </resources>

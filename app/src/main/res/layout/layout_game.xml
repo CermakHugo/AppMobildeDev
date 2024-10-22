@@ -7,193 +7,222 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <TextView
-        android:id="@+id/textView8"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Foi"
-        app:layout_constraintEnd_toEndOf="@+id/textView7"
-        app:layout_constraintTop_toBottomOf="@+id/textView7" />
-
     <ImageView
         android:id="@+id/imageView4"
-        android:layout_width="0dp"
+        android:layout_width="wrap_content"
         android:layout_height="0dp"
         app:layout_constraintDimensionRatio="3:1"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.508"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_marginPercent="5"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintWidth_percent="0.85"
         app:srcCompat="@drawable/long_papirus"
         tools:ignore="PxUsage" />
 
-    <!-- Barres de vie entre les deux images -->
-    <ProgressBar
-        android:id="@+id/progressBar1"
-        style="?android:attr/progressBarStyleHorizontal"
-        android:layout_width="275dp"
-        android:layout_height="20dp"
-        android:progress="50"
-        android:progressTint="@android:color/holo_green_light"
-        app:layout_constraintEnd_toEndOf="@+id/imageView4"
-        app:layout_constraintTop_margin="8dp"
-        app:layout_constraintTop_toBottomOf="@id/imageView4"
-        app:layout_constraintWidth_percent="0.85" />
-
-    <ProgressBar
-        android:id="@+id/progressBar2"
-        style="?android:attr/progressBarStyleHorizontal"
-        android:layout_width="275dp"
-        android:layout_height="20dp"
-        android:progress="70"
-        android:progressTint="@android:color/holo_orange_light"
-        app:layout_constraintEnd_toEndOf="@+id/progressBar1"
-        app:layout_constraintTop_margin="8dp"
-        app:layout_constraintTop_toBottomOf="@id/progressBar1"
-        app:layout_constraintWidth_percent="0.85" />
-
-    <ProgressBar
-        android:id="@+id/progressBar3"
-        style="?android:attr/progressBarStyleHorizontal"
-        android:layout_width="275dp"
-        android:layout_height="20dp"
-        android:progress="30"
-        android:progressTint="@android:color/holo_red_light"
-        app:layout_constraintEnd_toEndOf="@+id/progressBar2"
-        app:layout_constraintTop_margin="8dp"
-        app:layout_constraintTop_toBottomOf="@id/progressBar2"
-        app:layout_constraintWidth_percent="0.85" />
-
-    <ProgressBar
-        android:id="@+id/progressBar4"
-        style="?android:attr/progressBarStyleHorizontal"
-        android:layout_width="275dp"
-        android:layout_height="20dp"
-        android:progress="90"
-        android:progressTint="@android:color/holo_blue_light"
-        app:layout_constraintEnd_toEndOf="@+id/progressBar3"
-        app:layout_constraintTop_margin="8dp"
-        app:layout_constraintTop_toBottomOf="@id/progressBar3"
-        app:layout_constraintWidth_percent="0.85" />
-
-    <ImageView
-        android:id="@+id/imageView9"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        app:layout_constraintBottom_margin="5%"
-        app:layout_constraintDimensionRatio="1:1"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.487"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_margin="5%"
-        app:layout_constraintTop_toBottomOf="@+id/progressBar4"
-        app:layout_constraintWidth_percent="0.9"
-        app:srcCompat="@drawable/papyrus" />
-
-    <Button
-        android:id="@+id/button3"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:backgroundTint="#157C21"
-        android:text="Accepter"
-        app:layout_constraintEnd_toStartOf="@id/button6"
-        app:layout_constraintHeight_percent="0.06"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_margin="3%"
-        app:layout_constraintTop_toBottomOf="@id/imageView9"
-        app:layout_constraintWidth_percent="0.35" />
-
-    <Button
-        android:id="@+id/button6"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:backgroundTint="#BB0000"
-        android:text="Refuser"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHeight_percent="0.06"
-        app:layout_constraintStart_toEndOf="@id/button3"
-        app:layout_constraintTop_margin="3%"
-        app:layout_constraintTop_toBottomOf="@id/imageView9"
-        app:layout_constraintWidth_percent="0.35" />
-
-    <ImageView
-        android:id="@+id/imageView8"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        app:layout_constraintWidth_percent="0.85"
-        app:layout_constraintDimensionRatio="3:1"
-        app:layout_constraintTop_toBottomOf="@id/button3"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_margin="5%"
-        app:srcCompat="@drawable/long_papirus" />
-
     <TextView
-        android:id="@+id/textView2"
-        android:layout_width="263dp"
-        android:layout_height="32dp"
-        android:fontFamily="cursive"
-        android:text="<J> <N> <M> <A>, Jour <NJ>"
-        android:textAlignment="center"
-        android:textSize="20sp"
-        app:layout_constraintBottom_toBottomOf="@+id/imageView8"
-        app:layout_constraintEnd_toEndOf="@+id/imageView8"
-        app:layout_constraintHorizontal_bias="0.497"
-        app:layout_constraintStart_toStartOf="@+id/imageView8"
-        app:layout_constraintTop_toTopOf="@+id/imageView8" />
-
-    <TextView
-        android:id="@+id/textView4"
+        android:id="@+id/NameText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:fontFamily="@font/alex_brush"
-        android:text="<Prenom> <numéro> <dynastie>"
+        android:text="Prenom/numéro/dynastie"
         android:textSize="24sp"
         app:layout_constraintBottom_toBottomOf="@+id/imageView4"
         app:layout_constraintEnd_toEndOf="@+id/imageView4"
-        app:layout_constraintHorizontal_bias="0.493"
+        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="@+id/imageView4"
-        app:layout_constraintTop_toTopOf="@+id/imageView4" />
+        app:layout_constraintTop_toTopOf="@+id/imageView4"
+        app:layout_constraintVertical_bias="0.343" />
 
     <TextView
-        android:id="@+id/textView5"
-        android:layout_width="266dp"
-        android:layout_height="202dp"
+        android:id="@+id/DayText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:fontFamily="cursive"
+        android:text="Jour : "
+        android:textAlignment="center"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="@+id/NameText"
+        app:layout_constraintHorizontal_bias="0.307"
+        app:layout_constraintStart_toStartOf="@+id/NameText"
+        app:layout_constraintTop_toBottomOf="@+id/NameText" />
+
+    <!-- Barres de vie entre les deux images -->
+
+    <TextView
+        android:id="@+id/dayInt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:fontFamily="cursive"
+        android:text="0"
+        android:textAlignment="center"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="@+id/NameText"
+        app:layout_constraintHorizontal_bias="0.614"
+        app:layout_constraintStart_toStartOf="@+id/NameText"
+        app:layout_constraintTop_toBottomOf="@+id/NameText" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="1dp"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView4">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/SatisfactionText"
+                android:layout_width="90dp"
+                android:layout_height="wrap_content"
+                android:text="@string/satisfaction"
+                android:textSize="16sp" />
+
+            <ProgressBar
+                android:id="@+id/SatisfactionBar"
+                style="?android:attr/progressBarStyleHorizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:progress="50"
+                android:progressTint="@android:color/holo_green_light"
+                app:layout_constraintWidth_percent="0.85" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/EconomyText"
+                android:layout_width="90dp"
+                android:layout_height="wrap_content"
+                android:text="@string/economy"
+                android:textSize="16sp" />
+
+            <ProgressBar
+                android:id="@+id/EconomyBar"
+                style="?android:attr/progressBarStyleHorizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:progress="70"
+                android:progressTint="@android:color/holo_orange_light"
+                app:layout_constraintWidth_percent="0.85" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/MilitaryText"
+                android:layout_width="90dp"
+                android:layout_height="wrap_content"
+                android:text="@string/military"
+                android:textSize="16sp" />
+
+            <ProgressBar
+                android:id="@+id/MilitaryBar"
+                style="?android:attr/progressBarStyleHorizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:progress="30"
+                android:progressTint="@android:color/holo_red_light"
+                app:layout_constraintWidth_percent="0.85" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/FaithText"
+                android:layout_width="90dp"
+                android:layout_height="wrap_content"
+                android:text="@string/faith"
+                android:textSize="16sp" />
+
+            <ProgressBar
+                android:id="@+id/FaithBar"
+                style="?android:attr/progressBarStyleHorizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:progress="90"
+                android:progressTint="@android:color/holo_blue_light"
+                app:layout_constraintWidth_percent="0.85" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/imageView9"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintDimensionRatio="1:1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout"
+        app:layout_constraintWidth_percent="0.9"
+        app:srcCompat="@drawable/papyrus" />
+
+    <TextView
+        android:id="@+id/RequestText"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="50dp"
+        android:layout_marginEnd="50dp"
         android:fontFamily="cursive"
         android:text="Requette"
         android:textAlignment="center"
         android:textSize="20sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="@+id/imageView9"
-        app:layout_constraintEnd_toEndOf="@+id/imageView9"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/imageView9"
-        app:layout_constraintTop_toBottomOf="@+id/progressBar4"
-        tools:text="<Texte de la requette>" />
+        app:layout_constraintTop_toTopOf="@+id/imageView9"
+        app:layout_constraintVertical_bias="0.274"
+        tools:text="Texte de la requette" />
 
-    <TextView
-        android:id="@+id/textView3"
-        android:layout_width="wrap_content"
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Popularité"
-        app:layout_constraintStart_toStartOf="@+id/imageView4"
-        app:layout_constraintTop_toBottomOf="@+id/imageView4" />
+        android:layout_marginTop="16dp"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toBottomOf="@+id/imageView9">
 
-    <TextView
-        android:id="@+id/textView6"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Richesse"
-        app:layout_constraintEnd_toEndOf="@+id/textView3"
-        app:layout_constraintTop_toBottomOf="@+id/textView3" />
+        <Button
+            android:id="@+id/AcceptButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:backgroundTint="#157C21"
+            android:text="@string/accept_button"
+            app:layout_constraintHeight_percent="0.06"
+            app:layout_constraintWidth_percent="0.35" />
 
-    <TextView
-        android:id="@+id/textView7"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Armée"
-        app:layout_constraintEnd_toEndOf="@+id/textView6"
-        app:layout_constraintTop_toBottomOf="@+id/textView6" />
+        <Button
+            android:id="@+id/RefuseButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:backgroundTint="#BB0000"
+            android:text="@string/refuse_button"
+            app:layout_constraintHeight_percent="0.06"
+            app:layout_constraintWidth_percent="0.35"
+            tools:text="@string/refuse_button" />
+    </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

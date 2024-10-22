@@ -1,4 +1,4 @@
-package com.example.aldegardproject;
+package com.example.aldegardproject.models;
 
 public enum GameDifficulty {
 

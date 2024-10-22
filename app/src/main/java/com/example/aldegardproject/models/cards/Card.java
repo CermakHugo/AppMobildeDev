@@ -4,7 +4,20 @@ import com.example.aldegardproject.models.King;
 import com.example.aldegardproject.models.characteristics.Characteristic;
 
 public abstract class Card {
+    public String getTitle() {
+        return title;
+    }
+
     protected String title;
+
+    public String getDescription() {
+        return description;
+    }
+
+    public boolean isConstantCard() {
+        return isConstantCard;
+    }
+
     protected String description;
     protected boolean isConstantCard;
     protected int optimalValue;

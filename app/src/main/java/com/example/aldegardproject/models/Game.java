@@ -2,7 +2,6 @@ package com.example.aldegardproject.models;
 
 import static java.lang.Math.abs;
 
-import com.example.aldegardproject.GameDifficulty;
 import com.example.aldegardproject.models.cards.Card;
 import com.example.aldegardproject.models.cards.EconomyCard;
 import com.example.aldegardproject.models.cards.FaithCard;
@@ -15,6 +14,8 @@ import java.util.List;
 import java.util.Random;
 
 public class Game {
+
+
     private King currentKing;
 
     private final GameDifficulty gameDifficulty;
@@ -38,18 +39,22 @@ public class Game {
     }
 
     public void initFaithCards() {
+        allFaithCard.add(new FaithCard("Nouvelle Église", "Construire une nouvelle église pour le clergé", new int[] {8, 0, -8, 0, 4, 0}, 50, false));
         allCard.addAll(allFaithCard);
     }
 
     public void initMilitaryCards() {
+        allMilitaryCard.add(new MilitaryCard("Technologie Militaire", "Votre général demande d’investir plus d’argent dans la recherche de nouvelle arme", new int[] {0,4,-10,0,6,0}, 50, false));
         allCard.addAll(allMilitaryCard);
     }
 
     public void initEconomyCards() {
+        allEconomyCard.add(new EconomyCard("No Title", "No Description", new int[] {0,0,0,0,0,0}, 50, false));
         allCard.addAll(allEconomyCard);
     }
 
     public void initSatisfactionCards() {
+        allSatisfactionCard.add( new SatisfactionCard("Nouvelle Aqueduc", "Les territoires de l’est sont mal approvisionnés en eau, construire un nouvel aqueduc pourrais résoudre ça", new int[] {0,0,-10,5,10,0}, 50, false));
         allCard.addAll(allSatisfactionCard);
     }
 
@@ -63,12 +68,13 @@ public class Game {
     }
 
     public void endDay(){
-        updateWeightOfCard();
+
         startNewDay();
     }
 
     public void startNewDay(){
         currentDays++;
+        updateWeightOfCard();
         if(isNewMonth()){
             for (Characteristic characteristic : currentKing.getCharacteristics()) {
                 characteristic.setIsDisgrace(false);
@@ -176,12 +182,12 @@ public class Game {
         for (FaithCard faithCard : allFaithCard) {
             maxIndex += faithCard.getWeight();
         }
-        int weightValue = random.nextInt(maxIndex - 1);
+        int weightValue = random.nextInt(maxIndex);
         int selectedCardIndex = 0;
 
         while (weightValue > 0) {
             int currentCardWeight = allFaithCard.get(selectedCardIndex).getWeight();
-            if (currentCardWeight > weightValue) {
+            if (currentCardWeight < weightValue) {
                 selectedCardIndex++;
             }
             weightValue -= currentCardWeight;
@@ -195,12 +201,12 @@ public class Game {
         for (MilitaryCard militaryCard : allMilitaryCard) {
             maxIndex += militaryCard.getWeight();
         }
-        int weightValue = random.nextInt(maxIndex - 1);
+        int weightValue = random.nextInt(maxIndex);
         int selectedCardIndex = 0;
 
         while (weightValue > 0) {
             int currentCardWeight = allMilitaryCard.get(selectedCardIndex).getWeight();
-            if (currentCardWeight > weightValue) {
+            if (currentCardWeight < weightValue) {
                 selectedCardIndex++;
             }
             weightValue -= currentCardWeight;
@@ -214,12 +220,12 @@ public class Game {
         for (EconomyCard economyCard : allEconomyCard) {
             maxIndex += economyCard.getWeight();
         }
-        int weightValue = random.nextInt(maxIndex - 1);
+        int weightValue = random.nextInt(maxIndex);
         int selectedCardIndex = 0;
 
         while (weightValue > 0) {
             int currentCardWeight = allEconomyCard.get(selectedCardIndex).getWeight();
-            if (currentCardWeight > weightValue) {
+            if (currentCardWeight < weightValue) {
                 selectedCardIndex++;
             }
             weightValue -= currentCardWeight;
@@ -233,17 +239,27 @@ public class Game {
         for (SatisfactionCard satisfactionCard : allSatisfactionCard) {
             maxIndex += satisfactionCard.getWeight();
         }
-        int weightValue = random.nextInt(maxIndex - 1);
+        int weightValue = random.nextInt(maxIndex);
         int selectedCardIndex = 0;
 
         while (weightValue > 0) {
             int currentCardWeight = allSatisfactionCard.get(selectedCardIndex).getWeight();
-            if (currentCardWeight > weightValue) {
+            if (currentCardWeight < weightValue) {
                 selectedCardIndex++;
             }
             weightValue -= currentCardWeight;
 
         }
         return allSatisfactionCard.get(selectedCardIndex);
+    }
+
+    public Card getCurrentCard(){return currentCard;}
+
+    public King getCurrentKing() {
+        return currentKing;
+    }
+
+    public int getCurrentDays() {
+        return currentDays;
     }
 }
