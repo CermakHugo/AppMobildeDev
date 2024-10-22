@@ -28,6 +28,7 @@ public abstract class Characteristic implements Serializable {
 
     public void setIsDisgrace(boolean isDisgrace){
         this.isDisgrace = isDisgrace;
+        value = 30;
     }
 
     public int getValue() {
