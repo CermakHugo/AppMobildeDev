@@ -197,6 +197,9 @@ public class Game implements Serializable {
                         isLoose = true;
                         break;
                     }
+                    else if (characteristic.getValue() <= characteristic.getMinValue()) {
+                        characteristic.setIsDisgrace(true);
+                    }
                 }
                 break;
             case MEDIUM:
